@@ -1,0 +1,73 @@
+INSERT INTO email_template (email_template_id, email_template_name, email_template_uuid, email_template_owner)
+VALUES (2, 'amazon', '9cf6d691-6fc1-4c4a-92ff-90b9c1f74374', 1);
+
+INSERT INTO email_template (email_template_id, email_template_name, email_template_uuid, email_template_owner)
+VALUES (3, 'google',  '23e451d3-4e7b-4365-b762-abec51e3f8d9', 1);
+
+INSERT INTO email_template (email_template_id, email_template_name, email_template_uuid, email_template_owner)
+VALUES (4, 'microsoft',  '0e8b05d6-5047-4d87-82cb-eeea47c1a993',1);
+
+INSERT INTO email_template (email_template_id, email_template_name, email_template_uuid, email_template_owner)
+VALUES (5, 'onenote',  '415620f8-6747-4536-b483-a4b69eeb15fc',1);
+
+INSERT INTO email_template (email_template_id, email_template_name, email_template_uuid, email_template_owner)
+VALUES (6, 'paypal', '4a9ab46b-d972-4cff-86e1-c65a7f6beeaa',1);
+
+INSERT INTO email_template (email_template_id, email_template_name, email_template_uuid, email_template_owner)
+VALUES (1, 'excel',  'ca525cd1-cb70-4b8a-87a4-873be4492221', 1);
+
+  INSERT INTO campaign (campaign_owner, campaign_name, campaign_subject, email_template_id, campaign_status, campaign_envelope_email_id, campaign_env_name, campaign_timestamp)
+  VALUES (1, 'Campaign 3', 'Another Campaign', 2, 1, 'envelope456@example.com', 'Envelope 2', '2023-09-26 10:00:00');
+
+  INSERT INTO campaign (campaign_owner, campaign_name, campaign_subject, email_template_id, campaign_status, campaign_envelope_email_id, campaign_env_name, campaign_timestamp)
+  VALUES (1, 'Campaign 4', 'New Campaign', 3, 0, 'envelope789@example.com', 'Envelope 3', '2023-09-27 12:15:00');
+
+  INSERT INTO campaign (campaign_owner, campaign_name, campaign_subject, email_template_id, campaign_status, campaign_envelope_email_id, campaign_env_name, campaign_timestamp)
+  VALUES (1, 'Campaign 5', 'Latest Campaign', 4, 1, 'envelope101112@example.com', 'Envelope 4', '2023-09-28 15:30:00');
+
+  INSERT INTO campaign (campaign_owner, campaign_name, campaign_subject, email_template_id, campaign_status, campaign_envelope_email_id, campaign_env_name, campaign_timestamp)
+  VALUES (1, 'Campaign 6', 'Newest Campaign', 5, 0, 'envelope131415@example.com', 'Envelope 5', '2023-09-29 17:45:00');
+
+  INSERT INTO user (user_id, user_name, user_email, user_department, user_region, user_owner, user_validation)
+  VALUES (2, 'Alice Smith', 'alice.smith@example.com', 'Sales', 'Mumbai',  1, 1);
+
+  INSERT INTO user (user_id, user_name, user_email, user_department, user_region, user_owner, user_validation)
+  VALUES (3, 'Bob Johnson', 'bob.johnson@example.com', 'IT', 'PCMC',  1, 1);
+
+  INSERT INTO user (user_id, user_name, user_email, user_department, user_region, user_owner, user_validation)
+  VALUES (4, 'Ella Williams', 'ella.williams@example.com', 'HR', 'Pune',  1, 1);
+
+  INSERT INTO user (user_id, user_name, user_email, user_department, user_region, user_owner, user_validation)
+  VALUES (5, 'Michael Brown', 'michael.brown@example.com', 'Sales', 'Mumbai',  1, 1);
+
+  INSERT INTO user (user_id, user_name, user_email, user_department, user_region, user_owner, user_validation)
+  VALUES (6, 'Linda Lee', 'linda.lee@example.com', 'IT', 'PCMC', 1, 1);
+
+  INSERT INTO user (user_id, user_name, user_email, user_department, user_region, user_owner, user_validation)
+  VALUES (7, 'David Clark', 'david.clark@example.com', 'HR', 'Pune',  1, 1);
+
+  INSERT INTO user (user_id, user_name, user_email, user_department, user_region, user_owner, user_validation)
+  VALUES (8, 'Sophia Taylor', 'sophia.taylor@example.com', 'Sales', 'Mumbai', 1, 1);
+
+  INSERT INTO user (user_id, user_name, user_email, user_department, user_region, user_owner, user_validation)
+  VALUES (9, 'James White', 'james.white@example.com', 'IT', 'PCMC',  1, 1);
+
+  INSERT INTO user (user_id, user_name, user_email, user_department, user_region, user_owner, user_validation)
+  VALUES (10, 'Olivia Anderson', 'olivia.anderson@example.com', 'HR', 'Pune', 1, 1);
+
+
+
+
+  INSERT INTO user_activity (user_activity_id, user_id, campaign_id, user_activity_sent, user_activity_sent_timestamp, user_activity_read, user_activity_read_timestamp, user_activity_read_device, user_activity_phished, user_activity_phished_timestamp, user_activity_phished_device)
+  VALUES
+    (2, 10, 1, 1, DATE_SUB(NOW(), INTERVAL 10 DAY), 1, DATE_SUB(NOW(), INTERVAL 9 DAY), 'Device A', 1, DATE_SUB(NOW(), INTERVAL 8 DAY), 'Device B'),
+    (3, 10, 1, 1, DATE_SUB(NOW(), INTERVAL 7 DAY), 1, DATE_SUB(NOW(), INTERVAL 6 DAY), 'Device C', 1, DATE_SUB(NOW(), INTERVAL 5 DAY), 'Device D'),
+    (4, 9, 1, 1, DATE_SUB(NOW(), INTERVAL 45 DAY), 1, DATE_SUB(NOW(), INTERVAL 44 DAY), 'Device E', 1, DATE_SUB(NOW(), INTERVAL 43 DAY), 'Device F'),
+    (5, 8, 2, 1, DATE_SUB(NOW(), INTERVAL 60 DAY), 1, DATE_SUB(NOW(), INTERVAL 59 DAY), 'Device G', 1, DATE_SUB(NOW(), INTERVAL 58 DAY), 'Device H'),
+    (6, 3, 2, 1, DATE_SUB(NOW(), INTERVAL 90 DAY), 1, DATE_SUB(NOW(), INTERVAL 89 DAY), 'Device I', 1, DATE_SUB(NOW(), INTERVAL 88 DAY), 'Device J'),
+    (7, 3, 2, 1, DATE_SUB(NOW(), INTERVAL 120 DAY), 1, DATE_SUB(NOW(), INTERVAL 119 DAY), 'Device K', 1, DATE_SUB(NOW(), INTERVAL 118 DAY), 'Device L'),
+    (8, 4, 3, 1, DATE_SUB(NOW(), INTERVAL 150 DAY), 1, DATE_SUB(NOW(), INTERVAL 149 DAY), 'Device M', 1, DATE_SUB(NOW(), INTERVAL 148 DAY), 'Device N'),
+    (9, 4, 3, 1, DATE_SUB(NOW(), INTERVAL 30 DAY), 1, DATE_SUB(NOW(), INTERVAL 29 DAY), 'Device O', 1, DATE_SUB(NOW(), INTERVAL 28 DAY), 'Device P'),
+    (10, 5, 3, 1, DATE_SUB(NOW(), INTERVAL 45 DAY), 1, DATE_SUB(NOW(), INTERVAL 44 DAY), 'Device Q', 1, DATE_SUB(NOW(), INTERVAL 43 DAY), 'Device R');
+
+
