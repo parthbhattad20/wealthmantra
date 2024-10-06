@@ -21,6 +21,12 @@ function CalculatorCard() {
     setIsVisible(false);
   };
 
+
+  const formatNumberWithCommas = (number) => {
+    // Convert number to a string and use regex to add commas
+    return Number(number).toLocaleString(undefined, { maximumFractionDigits: 2 });
+  };
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setInputs((prevInputs) => ({
@@ -36,7 +42,7 @@ function CalculatorCard() {
     if (calculatorType === 'Position_Sizing') {
       const { accountRisk, accountSize, tradeRisk } = inputs;
       calcResult = (accountRisk * accountSize) / tradeRisk;
-      calcResult = calcResult.toFixed(2);
+      calcResult = formatNumberWithCommas(calcResult.toFixed(2));
 
     // 2. Lumpsum Future Value Calculator Logic
     } else if (calculatorType === 'Lumpsum_FV') {
@@ -44,7 +50,7 @@ function CalculatorCard() {
       const r = rate / 100;
       const t = years;
       calcResult = presentValue * (1 + r) ** t;
-      calcResult = calcResult.toFixed(2);
+      calcResult = formatNumberWithCommas(calcResult.toFixed(2));
 
     // 3. Goal Lumpsum Calculator Logic
     } else if (calculatorType === 'Goal_Lumpsum') {
@@ -52,13 +58,13 @@ function CalculatorCard() {
       const r = rate / 100;
       const t = years;
       calcResult = goalAmount / (1 + r) ** t;
-      calcResult = calcResult.toFixed(2);
+      calcResult = formatNumberWithCommas(calcResult.toFixed(2));
 
     // 4. CAGR (Compound Annual Growth Rate) Calculator Logic
     } else if (calculatorType === 'CAGR') {
       const { initialValue, finalValue, years } = inputs;
       calcResult = ((finalValue / initialValue) ** (1 / years) - 1) * 100;
-      calcResult = calcResult.toFixed(2);
+      calcResult = formatNumberWithCommas(calcResult.toFixed(2));
 
     // 5. SIP (Systematic Investment Plan) Calculator Logic
     } else if (calculatorType === 'SIP') {
@@ -66,7 +72,7 @@ function CalculatorCard() {
       const n = years * 12;
       const r = rate / 100 / 12;
       calcResult = monthlyInvestment * (((1 + r) ** n - 1) / r) * (1 + r);
-      calcResult = calcResult.toFixed(2);
+      calcResult = formatNumberWithCommas(calcResult.toFixed(2));
 
     // 6. Goal SIP Calculator Logic
     } else if (calculatorType === 'Goal_SIP') {
@@ -74,7 +80,7 @@ function CalculatorCard() {
       const n = years * 12;
       const r = rate / 100 / 12;
       calcResult = goalAmount / (((1 + r) ** n - 1) / r) * (1 + r);
-      calcResult = calcResult.toFixed(2);
+      calcResult = formatNumberWithCommas(calcResult.toFixed(2));
     }
 
     setResult(calcResult);

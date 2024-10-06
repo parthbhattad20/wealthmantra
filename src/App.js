@@ -8,6 +8,7 @@ import ContactPage from "./pages/ContactPage";
 import About from "./pages/About";
 import ErrorPage from "./pages/ErrorPage";
 import CalculatorCard from "./pages/Calculators";
+import StockPrices from "./components/stockData";
 
 // import WebBuilder from "./WebBuilder";
 
@@ -26,6 +27,7 @@ function App() {
                         path="/"
                         element={
                             <div className="font-sans bg-custom-blue">
+                         
                                 <HomeNav />
                                 <Home />
                                 <Footer />

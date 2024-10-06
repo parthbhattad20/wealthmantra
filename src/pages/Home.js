@@ -1,8 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { VideoHome } from "../components/VideoHome";
-import { Features } from "../components/Features";
+
 import FAQs from "../components/Faqs";
+import CandleChart from "../components/stockData";
+import PortfolioComponent from "../components/Portfolio";
+import WhatsAppIcon from "../components/Whatsapp";
+import TestimonialList from "./TestimonialsList";
 
 function Home() {
     const phishesStyle = {
@@ -12,6 +16,8 @@ function Home() {
     };
 
     const navigate = useNavigate();
+   
+    // GOXK7NWPV70EP75U
 
     return (
         <>
@@ -55,8 +61,12 @@ function Home() {
             </div>
 
             <VideoHome />
+            <PortfolioComponent/>
+            <TestimonialList/>
 
             <FAQs />
+            <WhatsAppIcon/>
+           
         </>
     );
 }
