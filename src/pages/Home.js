@@ -38,7 +38,7 @@ function Home() {
                                 <button
                                     className=" bg-blue-700 text-white py-3 px-8 rounded-full shadow-md hover:shadow-xl hover:bg-blue-800 transition-transform transform hover:scale-105 font-medium"
                                     onClick={() => {
-                                        navigate("/bookdemo");
+                                        navigate("/contact");
                                     }}
                                 >
                                     Contact
