@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { VideoHome } from "../components/VideoHome";
 
 import FAQs from "../components/Faqs";
-import CandleChart from "../components/stockData";
 import PortfolioComponent from "../components/Portfolio";
 import WhatsAppIcon from "../components/Whatsapp";
 import TestimonialList from "./TestimonialsList";
@@ -16,8 +15,7 @@ function Home() {
     };
 
     const navigate = useNavigate();
-   
-    // GOXK7NWPV70EP75U
+
 
     return (
         <>
@@ -41,7 +39,7 @@ function Home() {
                                         navigate("/contact");
                                     }}
                                 >
-                                    Contact
+                                    Contact Us
                                 </button>
                             </div>
                         </div>
