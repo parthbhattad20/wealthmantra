@@ -6,6 +6,7 @@ import FAQs from "../components/Faqs";
 import PortfolioComponent from "../components/Portfolio";
 import WhatsAppIcon from "../components/Whatsapp";
 import TestimonialList from "./TestimonialsList";
+import ReferralLinks from "../components/ReferralLinks";
 
 function Home() {
     const phishesStyle = {
@@ -61,8 +62,10 @@ function Home() {
             <VideoHome />
             <PortfolioComponent/>
             <TestimonialList/>
-
+   
+            <ReferralLinks/>
             <FAQs />
+         
             <WhatsAppIcon/>
            
         </>
