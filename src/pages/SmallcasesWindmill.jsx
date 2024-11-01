@@ -1,87 +1,72 @@
 import React from "react";
+import Navbar from "../components/HomeNav";
+import Footer from "../components/Footer";
 
-const SmallcaseList = () => {
-    const smallcases = [
-        { title: "Dividend - Smart Beta", url: "https://smlc.se/h3kun" },
-        { title: "Bringing the Bling", url: "https://smlc.se/guU2q" },
-        { title: "House of Bajaj", url: "https://smlc.se/3Mf9g" },
-        { title: "Auto Tracker", url: "https://smlc.se/rpo5h" },
-        { title: "Straight Flush", url: "https://smlc.se/KYOBs" },
-        { title: "Affordable Housing", url: "https://smlc.se/N2C9V" },
-        { title: "House of Murugappa", url: "https://smlc.se/lXKk5" },
-        { title: "Banking Privately", url: "https://smlc.se/OjnYi" },
-        { title: "Infra Tracker", url: "https://smlc.se/5Meks" },
-        { title: "Transporting India", url: "https://smlc.se/TnjoF" },
-        { title: "Energy Tracker", url: "https://smlc.se/GBHno" },
-        { title: "House of Mahindra", url: "https://smlc.se/9LoWr" },
-        { title: "Speciality Chemicals", url: "https://smlc.se/Zdg1Z" },
-        { title: "House of HDFC", url: "https://smlc.se/u5BfQ" },
-        { title: "Metal Tracker", url: "https://smlc.se/RqLzu" },
-        { title: "Low Risk - Smart Beta", url: "https://smlc.se/Ql63n" },
-        { title: "FMCG Tracker", url: "https://smlc.se/ejs1z" },
-        {
-            title: "Quality Smallcap - Smart Beta",
-            url: "https://smlc.se/j1sa5",
-        },
-        { title: "Banking Tracker", url: "https://smlc.se/AfHsi" },
-        { title: "Equity & Debt", url: "https://smlc.se/ELkBX" },
-        { title: "Digital Inclusion", url: "https://smlc.se/bWLOA" },
-        { title: "Realty Tracker", url: "https://smlc.se/F2kAj" },
-        { title: "House of Tata", url: "https://smlc.se/iljM3" },
-        { title: "Top 250 Stocks", url: "https://smlc.se/10FAn" },
-        { title: "Horizon 2030", url: "https://smlc.se/ZoKFO" },
-        { title: "Horizon 2035", url: "https://smlc.se/b4QHo" },
-        { title: "Horizon 2040", url: "https://smlc.se/6dydY" },
-        { title: "Horizon 2050", url: "https://smlc.se/S1PIf" },
-        { title: "Horizon 2055", url: "https://smlc.se/kHqoK" },
-        { title: "Safe Haven", url: "https://smlc.se/yjN8r" },
-        { title: "Electric Mobility", url: "https://smlc.se/ovw5k" },
-        { title: "Insurance Tracker", url: "https://smlc.se/E5lXf" },
-        { title: "Quality - Smart Beta", url: "https://smlc.se/d4suR" },
-        { title: "The Naked Trader", url: "https://smlc.se/SdtsN" },
-        { title: "Growth & Income", url: "https://smlc.se/lYeYM" },
-        { title: "Rising Rural Demand", url: "https://smlc.se/xXH5i" },
-        { title: "The PE List", url: "https://smlc.se/35KZL" },
-        { title: "Pharma Tracker", url: "https://smlc.se/p2rdh" },
-        { title: "IT Tracker", url: "https://smlc.se/uPVNh" },
-        {
-            title: "The Great Indian Middle Class",
-            url: "https://smlc.se/vAQZQ",
-        },
-        { title: "CANSLIM-esque", url: "https://smlc.se/QbyWq" },
-        { title: "Dividend Aristocrats", url: "https://smlc.se/j7KiM" },
-        { title: "Brand Value", url: "https://smlc.se/JI3dz" },
-        { title: "Value & Momentum", url: "https://smlc.se/E55mQ" },
-        { title: "Growth at a Fair Price", url: "https://smlc.se/26Mhc" },
-    ];
+const smallcases = [
+  { name: "Alpha Blend - Market Leader", url: "https://smlc.se/J04x5" },
+  { name: "Smallcap Akshat", url: "https://smlc.se/2Bt94" },
+  { name: "Value and Momentum", url: "https://smlc.se/7xVX3" },
+  { name: "SMALL CAP", url: "https://smlc.se/ggFOH" },
+  { name: "OMNI Bullet Train", url: "https://smlc.se/HG0IK" },
+  { name: "Mkj ffd pse", url: "https://smlc.se/VBJ37" },
+  { name: "Teji Mandi Flagship", url: "https://smlc.se/W7VY7" },
+  { name: "Quantace Infra Stars", url: "https://smlc.se/AXs8G" },
+  { name: "Quantace 5 Trillion India", url: "https://smlc.se/wmmaE" },
+  { name: "PSU Star", url: "https://smlc.se/G1QwY" },
+  { name: "ADITYA BIRLA SL IN", url: "https://smlc.se/0GJP2" },
+  { name: "STIC", url: "https://smlc.se/90JwC" },
+  { name: "NIFTY 50", url: "https://smlc.se/W7V48" },
+  { name: "MID CAP", url: "https://smlc.se/AxKGJ" },
+  { name: "Top 100 Market Cap", url: "https://smlc.se/GmNHo" },
+  { name: "Rajesh Sekar", url: "https://smlc.se/AXsqU" },
+  { name: "Insurance STAR", url: "https://smlc.se/3ZGvd" },
+  { name: "Dividend STAR", url: "https://smlc.se/9lGN9" },
+  { name: "Multicap Picks", url: "https://smlc.se/rwknk" },
+  { name: "PMS FINS", url: "https://smlc.se/V2Sc4" },
+  { name: "Teji Mandi Multicap", url: "https://smlc.se/JcEF8" },
+  { name: "FIINANCE TOP", url: "https://smlc.se/A7Frk" },
+  { name: "BU BND 3.0", url: "https://smlc.se/Og1Hy" },
+  { name: "Streak Backtesting", url: "https://smlc.se/QeBfS" },
+  { name: "Momentum Investments", url: "https://smlc.se/JZlxL" },
+  { name: "Top Midsize Cap", url: "https://smlc.se/ba5yW" },
+  { name: "Wings Star", url: "https://smlc.se/QdeTy" },
+  { name: "MNC Star", url: "https://smlc.se/NOd15" },
+  { name: "MIDCAP BY ADITYA", url: "https://smlc.se/LwxHo" },
+  { name: "ICICI Large Cap", url: "https://smlc.se/Y7e80" },
+  { name: "S&P STAR", url: "https://smlc.se/obAR1" },
+  { name: "Teji Mandi Balanced", url: "https://smlc.se/eXgMm" },
+  { name: "Fin Services MID CAP", url: "https://smlc.se/7mlJL" },
+  { name: "Top Infra Picks", url: "https://smlc.se/45Gn8" },
+  { name: "Growth Stars", url: "https://smlc.se/Qd3XR" },
+  { name: "Top Value Buys", url: "https://smlc.se/WYGpA" },
+  { name: "GREEN STAR", url: "https://smlc.se/JGrHl" },
+];
 
-    return (
-        <div className="bg-gray-100 py-12">
-            <div className="max-w-7xl mx-auto px-4">
-                <h1 className="text-3xl font-bold text-gray-800 mb-8">
-                    My Smallcases
-                </h1>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                    {smallcases.map((smallcase, index) => (
-                        <a
-                            key={index}
-                            href={smallcase.url}
-                            className="bg-white rounded-md shadow-md hover:shadow-lg transition-shadow duration-300"
-                        >
-                            <div className="p-6">
-                                <h2 className="text-lg font-semibold text-gray-800 mb-2">
-                                    {smallcase.title}
-                                </h2>
-                                <p className="text-gray-600 truncate">
-                                    {smallcase.url}
-                                </p>
-                            </div>
-                        </a>
-                    ))}
-                </div>
-            </div>
+const SmallcaseLinks = () => {
+  return (
+    <>
+    <Navbar/>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+      {smallcases.map((smallcase, index) => (
+        <div
+          key={index}
+          className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-between hover:shadow-xl transition-shadow"
+        >
+          <h2 className="text-lg font-bold mb-2">{smallcase.name}</h2>
+          <a
+            href={smallcase.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:text-blue-700"
+          >
+            View Smallcase
+          </a>
         </div>
-    );
+      ))}
+    </div>
+    <Footer/>
+    </>
+  );
 };
 
-export default SmallcaseList;
+export default SmallcaseLinks;

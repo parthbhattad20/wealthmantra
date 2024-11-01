@@ -94,6 +94,15 @@ function Navbar() {
                     LinkedIn
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    to="/smallcaselist"
+                    onClick={toggleMenu}
+                    className="text-gray-800 text-xl font-bold hover:text-blue-800"
+                  >
+                    SmallcaseList
+                  </Link>
+                </li>
              
               
               </ul>
@@ -135,6 +144,11 @@ function Navbar() {
             <li>
               <Link to="https://www.linkedin.com/company/wealthmantra/?viewAsMember=true" className="text-gray-800 text-base hover:text-blue-800">
                 LinkedIn
+              </Link>
+            </li>
+            <li>
+              <Link to="/smallcaselist" className="text-gray-800 text-base hover:text-blue-800">
+                SmallcaseList
               </Link>
             </li>
          
