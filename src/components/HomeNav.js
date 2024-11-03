@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaArrowRight, FaBars, FaTimes } from "react-icons/fa";
+import {  FaBars, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
 function Navbar() {
@@ -15,7 +15,7 @@ function Navbar() {
       <div className="navbar bg-white px-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <img src="./logoWM.jpeg" className="h-16" alt="logo" />
+          <img src="./logoWM.jpeg" className="h-16 rounded-lg" alt="logo" />
         </Link>
 
         {/* Mobile Menu Button */}
@@ -148,7 +148,7 @@ function Navbar() {
             </li>
             <li>
               <Link to="/smallcaselist" className="text-gray-800 text-base hover:text-blue-800">
-                SmallcaseList
+              SmallcaseList
               </Link>
             </li>
          
